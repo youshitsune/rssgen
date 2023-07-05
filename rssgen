@@ -4,7 +4,7 @@ import sys
 
 def run():
     for i in os.listdir(sys.argv[1]):
-        os.system(f"gmi2html --inline-all < {sys.argv[1]+i} > {i.split('.')[0]+'.html'}")
+        os.system(f"gmi2html --inline-all < {sys.argv[1]+i} > {sys.argv[1]+i.split('.')[0]+'.html'}")
         os.system(f"sup {sys.argv[1]+i.split('.')[0]+'.html'}")
     os.system(f"rm -rf {sys.argv[1]+'*.html'}")
 
